@@ -9,26 +9,25 @@ import DeliveryBoy from "./components/Deliveryboy/DeliveryBoy";
 import FeedBack from "./components/FeedBack/FeedBack";
 import TopBar from "./components/topbar/TopBar";
 import SideBar from "./components/sidebar/SideBar";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <div>
       <TopBar />
       <SideBar />
-      <div className="others">
-        <Routes>
-          {/* <Route path='/signin' element={<SignIn/>}/> */}
-          <Route exact path="/" element={<Home />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/orders" element={<Orders />} />
-          <Route path="/transactions" element={<Transaction />} />
-          <Route path="/delivery-boy" element={<DeliveryBoy />} />
-          <Route path="feedback" element={<FeedBack />} />
-        </Routes>
-      </div>
-    </BrowserRouter>
+      <Switch>
+        <Route path="/signin" component={SignIn} />
+        <Route exact path="/" component={Home} />
+        <Route path="/products" component={Products} />
+        <Route path="/orders" component={Orders} />
+        <Route path="/transactions" component={Transaction} />
+        <Route path="/delivery-boy" component={DeliveryBoy} />
+        <Route path="/feedback" component={FeedBack} />
+      </Switch>
+    </div>
   );
 };
 
-export default App;
+export default withRouter(App);

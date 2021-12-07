@@ -1,6 +1,6 @@
 import React from "react";
 import "./sidebar.css";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import {
   MenuSharp,
   ShoppingCartSharp,
@@ -13,7 +13,8 @@ import {
 } from "@material-ui/icons";
 
 // import dashboard from '../../img/dashboard/dashboard.png'
-const SideBar = () => {
+const SideBar = (props) => {
+  if (props.location.pathname === "/signin") return null;
   return (
     <div className="sidebar">
       <div className="head-icon">
@@ -68,4 +69,4 @@ const SideBar = () => {
   );
 };
 
-export default SideBar;
+export default withRouter(SideBar);

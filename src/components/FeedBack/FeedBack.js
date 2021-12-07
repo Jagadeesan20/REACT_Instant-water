@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const FeedBack = () => {
-    return (
-        <div>
-            feedback
-        </div>
-    )
-}
+  return <div className="others">feedback</div>;
+};
 
-export default FeedBack
+export default FeedBack;

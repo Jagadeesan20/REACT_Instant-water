@@ -1,0 +1,45 @@
+.select-dash {
+  display: flex;
+}
+.select-dash select {
+  height: 35px;
+  width: auto;
+  border-radius: 5px;
+  border: 0.3px solid rgb(187, 171, 171);
+  text-transform: capitalize;
+  color: grey;
+  background-color: white;
+  margin: auto 30px;
+}
+
+.select-dash select:focus {
+  outline: none !important;
+  /* border-color: rgb(187, 171, 171);
+  box-shadow: 0 0 10px rgb(187, 171, 171); */
+}
+
+.box {
+  display: flex;
+  align-items: center;
+}
+.box-size {
+  color: white;
+  margin-right: 40px;
+  border-radius: 8px;
+  padding: 0 70px 0 0;
+}
+.box-size p {
+  margin: 10px;
+}
+.box .green {
+  background: linear-gradient(135deg, #4b9153, #3efa54);
+}
+.box .pink {
+  background: linear-gradient(135deg, #980eb0, #e3a6ee);
+}
+.box .blue {
+  background: linear-gradient(135deg, #1448b8, #6997fa);
+}
+.box .orange {
+  background: linear-gradient(135deg, #f26f1d, #f79f79);
+}

@@ -1,10 +1,10 @@
 import React from "react";
 import "./SignIn.css";
 import Image from "../../img/weblogo.png";
-import { Link,useNavigate } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const SignIn = () => {
-  const navigate=useNavigate()
+  const history = useHistory();
   return (
     <>
       <div className="login">
@@ -17,11 +17,11 @@ const SignIn = () => {
             <input type="password" placeholder="Enter Password"></input>
             <div className="password">
               <Link to="#">forget password?</Link>
-              <button onClick={()=>navigate('/')}>Sign In</button>
+              <button onClick={() => history.push("/")}>Sign In</button>
             </div>
           </form>
           <p className="signup">
-            Don't have a supplier account?<Link to='#'>signup</Link>
+            Don't have a supplier account?<Link to="#">signup</Link>
           </p>
         </div>
       </div>

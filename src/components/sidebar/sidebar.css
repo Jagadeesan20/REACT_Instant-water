@@ -1,6 +1,6 @@
 .sidebar {
   position: absolute;
-  min-height: 100vh;
+  min-height: 165vh;
   width: 200px;
   background-color: rgb(37, 37, 100);
   z-index: 100;
